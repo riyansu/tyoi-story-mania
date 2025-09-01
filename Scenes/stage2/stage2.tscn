@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://dwpnkx6yshsxo"]
+
+[ext_resource type="Texture2D" uid="uid://bfqvxy6o4oui2" path="res://Scenes/stage1/assets/無題96_20250830135444.png" id="1_ji3i7"]
+[ext_resource type="Texture2D" uid="uid://bxpex4hdllg60" path="res://Scenes/stage1/assets/sand1.jpg" id="2_vn0ln"]
+[ext_resource type="Texture2D" uid="uid://ryjvonkm7aai" path="res://Scenes/stage1/assets/無題96_20250830134758.png" id="3_myofn"]
+[ext_resource type="Texture2D" uid="uid://c5r7mvjswaviu" path="res://Scenes/stage1/assets/無題96_20250830140144.png" id="4_23se8"]
+[ext_resource type="Texture2D" uid="uid://dpejmeepf8fat" path="res://Scenes/stage1/assets/無題96_20250830140740.png" id="5_uwwfd"]
+[ext_resource type="Texture2D" uid="uid://b5qawursq0nkn" path="res://Scenes/stage1/assets/無題96_20250830141155.png" id="6_mg2mo"]
+[ext_resource type="Texture2D" uid="uid://dsw40p1bie8au" path="res://Scenes/stage1/assets/無題96_20250830144048.png" id="7_4062d"]
+[ext_resource type="Texture2D" uid="uid://bg242t3kcn6ib" path="res://Scenes/stage1/assets/無題96_20250830150051.png" id="8_unnkd"]
+
+[sub_resource type="Environment" id="Environment_12ypd"]
+background_mode = 1
+background_color = Color(0.235294, 0.733333, 1, 1)
+glow_intensity = 4.55
+
+[node name="Stage1" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0215441, 0, -0.00231934)
+environment = SubResource("Environment_12ypd")
+fov = 53.8
+
+[node name="Sheet" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017314, 0, -15.3083)
+visible = false
+render_priority = -2
+texture = ExtResource("1_ji3i7")
+
+[node name="Sheet2" type="Sprite3D" parent="."]
+transform = Transform3D(19.8984, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, -0.00464654, -6.08719, -7.71922)
+render_priority = 1
+texture = ExtResource("2_vn0ln")
+region_rect = Rect2(2.85, 0, 0, 0)
+
+[node name="Background" type="Sprite3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.0346355, -1.46269, -18.1262)
+render_priority = 1
+texture = ExtResource("3_myofn")
+
+[node name="Windmill" type="Sprite3D" parent="Background"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0183954, 0.530971)
+render_priority = 2
+texture = ExtResource("4_23se8")
+
+[node name="CloudA" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0159674, 1.94027, -18.3324)
+render_priority = 2
+texture = ExtResource("5_uwwfd")
+
+[node name="CloudB" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.85801, 1.5269, -17.3961)
+render_priority = 2
+texture = ExtResource("6_mg2mo")
+
+[node name="HouseB" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.58383, -2.87165, -18.4777)
+render_priority = 3
+texture = ExtResource("7_4062d")
+
+[node name="HouseA1" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.37194, -1.54589, -16.678)
+render_priority = 4
+texture = ExtResource("8_unnkd")
+
+[node name="HouseA3" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.367, -1.54589, -18.8716)
+render_priority = 3
+texture = ExtResource("8_unnkd")
+
+[node name="HouseA2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.05356, -1.50302, -16.7118)
+render_priority = 4
+texture = ExtResource("8_unnkd")

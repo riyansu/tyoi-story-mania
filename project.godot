@@ -11,5 +11,14 @@ config_version=5
 [application]
 
 config/name="tyoi-story-mania"
+run/main_scene="res://Scenes/select/select.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://global.gd"
+
+[display]
+
+window/stretch/mode="viewport"

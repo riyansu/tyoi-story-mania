@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://k38rqa22hlqs"]
+
+[ext_resource type="Script" uid="uid://6dbm4aj5cenb" path="res://Scenes/select/select.gd" id="1_tj2jx"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tj2jx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.24927, 0.622776, 0.898879, 1)
+
+[node name="Button1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 153.0
+offset_right = 864.0
+offset_bottom = 257.0
+theme_override_font_sizes/font_size = 30
+text = "ステージ 1"
+flat = true
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 273.0
+offset_right = 864.0
+offset_bottom = 377.0
+theme_override_font_sizes/font_size = 30
+text = "ステージ 2"
+flat = true
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 393.0
+offset_right = 864.0
+offset_bottom = 497.0
+theme_override_font_sizes/font_size = 30
+text = "ステージ 3"
+flat = true
+
+[connection signal="button_down" from="Button1" to="." method="_on_button_1_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="Button3" to="." method="_on_button_3_button_down"]
