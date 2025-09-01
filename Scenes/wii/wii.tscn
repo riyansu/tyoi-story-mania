@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://crkgmu2hc1tay"]
+
+[ext_resource type="Script" uid="uid://b6w3qo7k7as01" path="res://Scenes/wii/wii.gd" id="1_rydk6"]
+[ext_resource type="Script" uid="uid://cph6mi286u054" path="res://Scenes/wii/wii-connect.gd" id="2_oonj0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rydk6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.24927, 0.622776, 0.898879, 1)
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 466.0
+offset_right = 865.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 30
+text = "戻る"
+flat = true
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_oonj0")
+
+[connection signal="button_down" from="Back" to="." method="_on_back_button_down"]

@@ -20,9 +20,9 @@ color = Color(0.24927, 0.622776, 0.898879, 1)
 [node name="Button1" type="Button" parent="."]
 layout_mode = 0
 offset_left = 288.0
-offset_top = 153.0
+offset_top = 107.0
 offset_right = 864.0
-offset_bottom = 257.0
+offset_bottom = 211.0
 theme_override_font_sizes/font_size = 30
 text = "ステージ 1"
 flat = true
@@ -30,9 +30,9 @@ flat = true
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
 offset_left = 288.0
-offset_top = 273.0
+offset_top = 227.0
 offset_right = 864.0
-offset_bottom = 377.0
+offset_bottom = 331.0
 theme_override_font_sizes/font_size = 30
 text = "ステージ 2"
 flat = true
@@ -40,13 +40,24 @@ flat = true
 [node name="Button3" type="Button" parent="."]
 layout_mode = 0
 offset_left = 288.0
-offset_top = 393.0
+offset_top = 347.0
 offset_right = 864.0
-offset_bottom = 497.0
+offset_bottom = 451.0
 theme_override_font_sizes/font_size = 30
 text = "ステージ 3"
+flat = true
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 466.0
+offset_right = 865.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 30
+text = "Wiiに接続"
 flat = true
 
 [connection signal="button_down" from="Button1" to="." method="_on_button_1_button_down"]
 [connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
 [connection signal="button_down" from="Button3" to="." method="_on_button_3_button_down"]
+[connection signal="button_down" from="Button4" to="." method="_on_button_4_button_down"]

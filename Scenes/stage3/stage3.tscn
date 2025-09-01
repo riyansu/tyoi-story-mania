@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://4ovqtna60xvv"]
+
+[ext_resource type="Texture2D" uid="uid://bfqvxy6o4oui2" path="res://Scenes/stage1/assets/無題96_20250830135444.png" id="1_n83lg"]
+[ext_resource type="Texture2D" uid="uid://bxpex4hdllg60" path="res://Scenes/stage1/assets/sand1.jpg" id="2_pb1t2"]
+[ext_resource type="Texture2D" uid="uid://dcxh45wld5td" path="res://Scenes/stage3/assets/無題96_20250831112308.png" id="3_kjgke"]
+[ext_resource type="Texture2D" uid="uid://cob7dauu3yk4w" path="res://Scenes/stage3/assets/無題96_20250831113254.png" id="4_kjgke"]
+[ext_resource type="Texture2D" uid="uid://v6wov8c84p2f" path="res://Scenes/stage3/assets/無題96_20250831113756.png" id="5_kyllx"]
+[ext_resource type="Texture2D" uid="uid://cpai47lmfqltw" path="res://Scenes/stage3/assets/無題96_20250831114235.png" id="6_3vkoi"]
+
+[sub_resource type="Environment" id="Environment_12ypd"]
+background_mode = 1
+background_color = Color(0.443137, 0.521569, 0.768627, 1)
+glow_intensity = 4.55
+
+[node name="Stage2" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.998024, 0, 0, 0, 0.998024, 0, 0, 0, 0.998024, 0.0215441, 0, -0.00231934)
+environment = SubResource("Environment_12ypd")
+fov = 53.8
+
+[node name="Sheet" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017314, 0, -15.3083)
+visible = false
+render_priority = -2
+texture = ExtResource("1_n83lg")
+
+[node name="Sheet2" type="Sprite3D" parent="."]
+transform = Transform3D(19.8984, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, -0.00464654, -6.08719, -7.71922)
+visible = false
+render_priority = 1
+texture = ExtResource("2_pb1t2")
+region_rect = Rect2(2.85, 0, 0, 0)
+
+[node name="Background" type="Sprite3D" parent="."]
+transform = Transform3D(1.60632, 0, 0, 0, 1.61075, 0, 0, 0, 1.2, 0.0346355, -1.46269, -18.1262)
+render_priority = 1
+texture = ExtResource("3_kjgke")
+
+[node name="PlanetA" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.708, -2.55345, 1.15118, -17.1682)
+render_priority = 3
+texture = ExtResource("4_kjgke")
+
+[node name="PlanetB" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.708, 0.408243, 1.5396, -17.9236)
+render_priority = 3
+texture = ExtResource("5_kyllx")
+
+[node name="PlanetC" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.708, 1.56451, 0.804672, -16.5251)
+render_priority = 4
+texture = ExtResource("6_3vkoi")

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m6ex4qnv6d0j"
-path.s3tc="res://.godot/imported/無題96_20250831090740.png-ca9a2064379d57470c714a9e56942ac8.s3tc.ctex"
+uid="uid://cpai47lmfqltw"
+path.s3tc="res://.godot/imported/無題96_20250831114235.png-1d1e5b6cbbde20f44a78f1c58a772e10.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Scenes/stage2/assets/無題96_20250831090740.png"
-dest_files=["res://.godot/imported/無題96_20250831090740.png-ca9a2064379d57470c714a9e56942ac8.s3tc.ctex"]
+source_file="res://Scenes/stage3/assets/無題96_20250831114235.png"
+dest_files=["res://.godot/imported/無題96_20250831114235.png-1d1e5b6cbbde20f44a78f1c58a772e10.s3tc.ctex"]
 
 [params]
 
