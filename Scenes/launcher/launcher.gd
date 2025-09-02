@@ -1,16 +1,24 @@
 extends Node
 
 func _ready():
-	$Label.text = "A"
+	$RightCurtain/Label.text = "A"
+	
+	
+var idable = true
 
 func _input(event):
 	if event is InputEventKey and event.is_pressed() and !event.is_echo():
 		var char = event.keycode
-		if 65 <= char and char <= 90:
+		if 65 <= char and char <= 90 and idable:
 			var id = OS.get_keycode_string(char)
 			Global.id = id
-			$Label.text = id
+			$RightCurtain/Label.text = id
 		elif char == 32:
-			var stage = "stage"+str(Global.selected)+"/"+"stage"+str(Global.selected)+".tscn"
-			get_tree().change_scene_to_file("res://Scenes/"+stage)
-	
+			idable = false
+			countdown()
+			
+			
+func countdown():
+	var stage = "stage"+str(Global.selected)+"/"+"stage"+str(Global.selected)+".tscn"
+	get_tree().change_scene_to_file("res://Scenes/"+stage)
+		
