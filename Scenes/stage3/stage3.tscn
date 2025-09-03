@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://4ovqtna60xvv"]
+[gd_scene load_steps=9 format=3 uid="uid://4ovqtna60xvv"]
 
 [ext_resource type="Texture2D" uid="uid://bfqvxy6o4oui2" path="res://Scenes/stage1/assets/無題96_20250830135444.png" id="1_n83lg"]
 [ext_resource type="Texture2D" uid="uid://bxpex4hdllg60" path="res://Scenes/stage1/assets/sand1.jpg" id="2_pb1t2"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cob7dauu3yk4w" path="res://Scenes/stage3/assets/無題96_20250831113254.png" id="4_kjgke"]
 [ext_resource type="Texture2D" uid="uid://v6wov8c84p2f" path="res://Scenes/stage3/assets/無題96_20250831113756.png" id="5_kyllx"]
 [ext_resource type="Texture2D" uid="uid://cpai47lmfqltw" path="res://Scenes/stage3/assets/無題96_20250831114235.png" id="6_3vkoi"]
+[ext_resource type="PackedScene" uid="uid://kb7x7tpav0bo" path="res://Components/curtain/curtain.tscn" id="7_kyllx"]
 
 [sub_resource type="Environment" id="Environment_12ypd"]
 background_mode = 1
@@ -51,3 +52,5 @@ texture = ExtResource("5_kyllx")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.708, 1.56451, 0.804672, -16.5251)
 render_priority = 4
 texture = ExtResource("6_3vkoi")
+
+[node name="Curtain" parent="." instance=ExtResource("7_kyllx")]

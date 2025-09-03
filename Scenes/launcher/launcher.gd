@@ -14,6 +14,8 @@ func _input(event):
 			Global.id = id
 			$RightCurtain/Label.text = id
 		elif char == 32:
+			Global.play_sound(preload("res://Assets/sfx/start.wav"))
+			await get_tree().create_timer(3).timeout
 			idable = false
 			countdown()
 			

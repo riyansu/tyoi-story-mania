@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://cht82h6mfuiwu"]
+[gd_scene load_steps=15 format=3 uid="uid://cht82h6mfuiwu"]
 
 [ext_resource type="Texture2D" uid="uid://bfqvxy6o4oui2" path="res://Scenes/stage1/assets/無題96_20250830135444.png" id="1_gbikg"]
+[ext_resource type="Script" uid="uid://b2d0ckry4sa8a" path="res://Scenes/stage1/scripts/manager.gd" id="1_todvm"]
 [ext_resource type="Texture2D" uid="uid://bxpex4hdllg60" path="res://Scenes/stage1/assets/sand1.jpg" id="2_08db2"]
 [ext_resource type="Texture2D" uid="uid://ryjvonkm7aai" path="res://Scenes/stage1/assets/無題96_20250830134758.png" id="2_iq3u6"]
 [ext_resource type="Texture2D" uid="uid://bg242t3kcn6ib" path="res://Scenes/stage1/assets/無題96_20250830150051.png" id="3_iq3u6"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b5qawursq0nkn" path="res://Scenes/stage1/assets/無題96_20250830141155.png" id="6_12ypd"]
 [ext_resource type="Script" uid="uid://b0ths4xe87ppl" path="res://Scenes/stage1/scripts/cloud.gd" id="7_0l5gf"]
 [ext_resource type="PackedScene" uid="uid://kb7x7tpav0bo" path="res://Components/curtain/curtain.tscn" id="11_jyfxc"]
+[ext_resource type="PackedScene" uid="uid://b5t1wjqdtug1q" path="res://Components/curtain_close/curtain_close.tscn" id="12_gylc8"]
 
 [sub_resource type="Environment" id="Environment_12ypd"]
 background_mode = 1
@@ -18,6 +20,7 @@ background_color = Color(0.235294, 0.733333, 1, 1)
 glow_intensity = 4.55
 
 [node name="Stage1" type="Node3D"]
+script = ExtResource("1_todvm")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0215441, 0, -0.00231934)
@@ -80,3 +83,5 @@ render_priority = 4
 texture = ExtResource("3_iq3u6")
 
 [node name="Curtain" parent="." instance=ExtResource("11_jyfxc")]
+
+[node name="CurtainClose" parent="." instance=ExtResource("12_gylc8")]
