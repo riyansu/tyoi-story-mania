@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3p5a8ddky5eb"]
+[gd_scene load_steps=6 format=3 uid="uid://dg8w1onwmddxx"]
 
-[ext_resource type="Script" uid="uid://dd4tcogacmnxk" path="res://Scenes/result/result.gd" id="1_ui4nf"]
+[ext_resource type="Script" uid="uid://c8xcfnq8ln5xx" path="res://Scenes/result/result.gd" id="1_ui4nf"]
 [ext_resource type="Texture2D" uid="uid://cimne6ond5efh" path="res://Components/curtain/curtain.webp" id="2_62i0f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ygkrc"]
@@ -14,7 +14,7 @@ outline_size = 5
 [sub_resource type="LabelSettings" id="LabelSettings_gp0ou"]
 font_size = 70
 
-[node name="Launcher" type="Node2D"]
+[node name="Result" type="Node2D"]
 script = ExtResource("1_ui4nf")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -39,6 +39,7 @@ offset_right = 673.0
 offset_bottom = 130.0
 text = "リザルト"
 label_settings = SubResource("LabelSettings_ygkrc")
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 262.0

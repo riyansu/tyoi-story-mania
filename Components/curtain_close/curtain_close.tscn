@@ -7,11 +7,11 @@
 script = ExtResource("1_guufc")
 
 [node name="LeftCurtain" type="Sprite2D" parent="."]
-position = Vector2(-290, 323.5)
-scale = Vector2(1.29955, 1.80168)
+position = Vector2(-336, 323.5)
+scale = Vector2(1.5, 1.80168)
 texture = ExtResource("2_3xmdc")
 
 [node name="RightCurtain" type="Sprite2D" parent="."]
-position = Vector2(1439, 323.5)
-scale = Vector2(1.29955, 1.80168)
+position = Vector2(1487, 323.5)
+scale = Vector2(1.5, 1.80168)
 texture = ExtResource("2_3xmdc")

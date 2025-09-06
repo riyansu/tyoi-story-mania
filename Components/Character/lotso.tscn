@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c54r0tymkl1r3"]
+
+[ext_resource type="Script" uid="uid://c6fgnahge086h" path="res://Components/Character/lotso.gd" id="1_sy74v"]
+[ext_resource type="Texture2D" uid="uid://b8thao3evvpa2" path="res://Assets/imgs/無題97_20250831214427.png" id="1_ufn3c"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_sy74v"]
+height = 0.1
+radius = 1.942
+
+[node name="Lotso" type="Node3D"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+script = ExtResource("1_sy74v")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+render_priority = 2
+texture = ExtResource("1_ufn3c")
+
+[node name="Lotso3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lotso3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0475085, 0)
+shape = SubResource("CylinderShape3D_sy74v")
+debug_color = Color(0, 0.564706, 0.862745, 1)

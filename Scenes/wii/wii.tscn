@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://crkgmu2hc1tay"]
+[gd_scene load_steps=4 format=3 uid="uid://crkgmu2hc1tay"]
 
 [ext_resource type="Script" uid="uid://b6w3qo7k7as01" path="res://Scenes/wii/wii.gd" id="1_rydk6"]
-[ext_resource type="Script" uid="uid://cph6mi286u054" path="res://Scenes/wii/wii-connect.gd" id="2_oonj0"]
+[ext_resource type="PackedScene" uid="uid://j1bcc3gjtufh" path="res://Components/pointer/pointer.tscn" id="3_l0x3a"]
+[ext_resource type="PackedScene" uid="uid://dlk2jhu7ts8a5" path="res://Components/pointer2/pointer2.tscn" id="3_wxc67"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -16,7 +17,7 @@ script = ExtResource("1_rydk6")
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-color = Color(0.24927, 0.622776, 0.898879, 1)
+color = Color(0.058589, 0.310255, 0.479793, 1)
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
@@ -28,7 +29,8 @@ theme_override_font_sizes/font_size = 30
 text = "戻る"
 flat = true
 
-[node name="Node" type="Node" parent="."]
-script = ExtResource("2_oonj0")
+[node name="Pointer" parent="." instance=ExtResource("3_l0x3a")]
+
+[node name="Pointer2" parent="." instance=ExtResource("3_wxc67")]
 
 [connection signal="button_down" from="Back" to="." method="_on_back_button_down"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5unnwo1p5og8"]
+
+[ext_resource type="Script" uid="uid://basdjaawawj0y" path="res://Components/Character/jessie.gd" id="1_absmj"]
+[ext_resource type="Texture2D" uid="uid://cfpu61bl6ythp" path="res://Assets/imgs/無題97_20250831153600.png" id="2_3cw24"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2y6be"]
+height = 0.235
+radius = 3.805
+
+[node name="Jessie" type="Node3D"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+script = ExtResource("1_absmj")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+render_priority = 5
+texture = ExtResource("2_3cw24")
+
+[node name="Jessie3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Jessie3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_2y6be")
+debug_color = Color(0, 0.564706, 0.862745, 1)

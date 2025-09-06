@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://xyvxyofhkwu3"]
+
+[ext_resource type="Texture2D" uid="uid://bsokw6x1eeqs0" path="res://Assets/imgs/無題97_20250831120243.png" id="1_jot66"]
+[ext_resource type="Script" uid="uid://87eqs063siij" path="res://Components/Character/woody.gd" id="1_lom7e"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lom7e"]
+height = 0.235
+radius = 3.805
+
+[node name="Woody" type="Node3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+script = ExtResource("1_lom7e")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+render_priority = 10
+texture = ExtResource("1_jot66")
+
+[node name="Woody3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Woody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_lom7e")
+debug_color = Color(0, 0.564706, 0.862745, 1)

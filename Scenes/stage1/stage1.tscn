@@ -1,18 +1,23 @@
-[gd_scene load_steps=15 format=3 uid="uid://cht82h6mfuiwu"]
+[gd_scene load_steps=20 format=3 uid="uid://cht82h6mfuiwu"]
 
 [ext_resource type="Texture2D" uid="uid://bfqvxy6o4oui2" path="res://Scenes/stage1/assets/無題96_20250830135444.png" id="1_gbikg"]
 [ext_resource type="Script" uid="uid://b2d0ckry4sa8a" path="res://Scenes/stage1/scripts/manager.gd" id="1_todvm"]
 [ext_resource type="Texture2D" uid="uid://bxpex4hdllg60" path="res://Scenes/stage1/assets/sand1.jpg" id="2_08db2"]
 [ext_resource type="Texture2D" uid="uid://ryjvonkm7aai" path="res://Scenes/stage1/assets/無題96_20250830134758.png" id="2_iq3u6"]
+[ext_resource type="PackedScene" uid="uid://b5unnwo1p5og8" path="res://Components/Character/jessie.tscn" id="3_1rala"]
 [ext_resource type="Texture2D" uid="uid://bg242t3kcn6ib" path="res://Scenes/stage1/assets/無題96_20250830150051.png" id="3_iq3u6"]
 [ext_resource type="Texture2D" uid="uid://dpejmeepf8fat" path="res://Scenes/stage1/assets/無題96_20250830140740.png" id="4_12ypd"]
 [ext_resource type="Texture2D" uid="uid://cdiuk0wsdivde" path="res://Scenes/stage1/assets/windmill.png" id="4_i3ko3"]
+[ext_resource type="PackedScene" uid="uid://dq1a8xmqbbefe" path="res://Components/Character/bullseye.tscn" id="4_s3lkt"]
 [ext_resource type="Texture2D" uid="uid://dsw40p1bie8au" path="res://Scenes/stage1/assets/無題96_20250830144048.png" id="5_08db2"]
 [ext_resource type="Script" uid="uid://twjac33urut5" path="res://Scenes/stage1/scripts/windmill.gd" id="5_i3ko3"]
 [ext_resource type="Texture2D" uid="uid://b5qawursq0nkn" path="res://Scenes/stage1/assets/無題96_20250830141155.png" id="6_12ypd"]
 [ext_resource type="Script" uid="uid://b0ths4xe87ppl" path="res://Scenes/stage1/scripts/cloud.gd" id="7_0l5gf"]
 [ext_resource type="PackedScene" uid="uid://kb7x7tpav0bo" path="res://Components/curtain/curtain.tscn" id="11_jyfxc"]
 [ext_resource type="PackedScene" uid="uid://b5t1wjqdtug1q" path="res://Components/curtain_close/curtain_close.tscn" id="12_gylc8"]
+[ext_resource type="PackedScene" uid="uid://j1bcc3gjtufh" path="res://Components/pointer/pointer.tscn" id="14_pv5w7"]
+[ext_resource type="PackedScene" uid="uid://xyvxyofhkwu3" path="res://Components/Character/woody.tscn" id="15_fmmni"]
+[ext_resource type="PackedScene" uid="uid://dlk2jhu7ts8a5" path="res://Components/pointer2/pointer2.tscn" id="18_6uwdf"]
 
 [sub_resource type="Environment" id="Environment_12ypd"]
 background_mode = 1
@@ -21,9 +26,12 @@ glow_intensity = 4.55
 
 [node name="Stage1" type="Node3D"]
 script = ExtResource("1_todvm")
+woody = ExtResource("15_fmmni")
+jessie = ExtResource("3_1rala")
+bullseye = ExtResource("4_s3lkt")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0215441, 0, -0.00231934)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0215441, 0, -0.904121)
 environment = SubResource("Environment_12ypd")
 fov = 53.8
 
@@ -69,7 +77,7 @@ texture = ExtResource("5_08db2")
 
 [node name="HouseA1" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.37194, -1.54589, -17.2895)
-render_priority = 4
+render_priority = 6
 texture = ExtResource("3_iq3u6")
 
 [node name="HouseA3" type="Sprite3D" parent="."]
@@ -79,9 +87,13 @@ texture = ExtResource("3_iq3u6")
 
 [node name="HouseA2" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.05356, -1.50302, -17.3233)
-render_priority = 4
+render_priority = 6
 texture = ExtResource("3_iq3u6")
 
 [node name="Curtain" parent="." instance=ExtResource("11_jyfxc")]
 
 [node name="CurtainClose" parent="." instance=ExtResource("12_gylc8")]
+
+[node name="Pointer" parent="." instance=ExtResource("14_pv5w7")]
+
+[node name="Pointer2" parent="." instance=ExtResource("18_6uwdf")]

@@ -1,12 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://g2xsffgj1dp2"]
+[gd_scene load_steps=16 format=3 uid="uid://g2xsffgj1dp2"]
 
 [ext_resource type="Texture2D" uid="uid://bfqvxy6o4oui2" path="res://Scenes/stage1/assets/無題96_20250830135444.png" id="1_ji3i7"]
+[ext_resource type="Script" uid="uid://gttttm4ik5af" path="res://Scenes/stage2/scripts/manager.gd" id="1_t23st"]
+[ext_resource type="PackedScene" uid="uid://321yy3q7ppvu" path="res://Components/Character/rex.tscn" id="2_b8881"]
 [ext_resource type="Texture2D" uid="uid://bxpex4hdllg60" path="res://Scenes/stage1/assets/sand1.jpg" id="2_vn0ln"]
+[ext_resource type="PackedScene" uid="uid://c54r0tymkl1r3" path="res://Components/Character/lotso.tscn" id="3_6mkti"]
 [ext_resource type="Texture2D" uid="uid://m6ex4qnv6d0j" path="res://Scenes/stage2/assets/無題96_20250831090740.png" id="3_su5er"]
+[ext_resource type="PackedScene" uid="uid://hivcbptrjcb2" path="res://Components/Character/alien.tscn" id="4_jr7py"]
 [ext_resource type="Texture2D" uid="uid://bxt8ga0kpsjin" path="res://Scenes/stage2/assets/無題96_20250831092739.png" id="6_55ceb"]
 [ext_resource type="Texture2D" uid="uid://bmjmayglh6prv" path="res://Scenes/stage2/assets/無題96_20250831093223.png" id="6_qbrv8"]
 [ext_resource type="PackedScene" uid="uid://kb7x7tpav0bo" path="res://Components/curtain/curtain.tscn" id="7_su5er"]
 [ext_resource type="Texture2D" uid="uid://8jqbfyvurim2" path="res://Scenes/stage2/assets/無題96_20250831094131.png" id="8_55ceb"]
+[ext_resource type="PackedScene" uid="uid://b5t1wjqdtug1q" path="res://Components/curtain_close/curtain_close.tscn" id="8_t23st"]
+[ext_resource type="PackedScene" uid="uid://j1bcc3gjtufh" path="res://Components/pointer/pointer.tscn" id="10_qv41w"]
+[ext_resource type="PackedScene" uid="uid://dlk2jhu7ts8a5" path="res://Components/pointer2/pointer2.tscn" id="14_bchlq"]
 
 [sub_resource type="Environment" id="Environment_12ypd"]
 background_mode = 1
@@ -14,6 +21,10 @@ background_color = Color(0.443137, 0.521569, 0.768627, 1)
 glow_intensity = 4.55
 
 [node name="Stage2" type="Node3D"]
+script = ExtResource("1_t23st")
+rex = ExtResource("2_b8881")
+lotso = ExtResource("3_6mkti")
+alien = ExtResource("4_jr7py")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.998024, 0, 0, 0, 0.998024, 0, 0, 0, 0.998024, 0.0215441, 0, -0.00231934)
@@ -27,13 +38,13 @@ render_priority = -2
 texture = ExtResource("1_ji3i7")
 
 [node name="Sheet2" type="Sprite3D" parent="."]
-transform = Transform3D(19.8984, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, -0.00464654, -6.08719, -7.71922)
+transform = Transform3D(19.8984, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, -0.00464654, -4.79866, -7.71922)
 render_priority = 1
 texture = ExtResource("2_vn0ln")
 region_rect = Rect2(2.85, 0, 0, 0)
 
 [node name="Background" type="Sprite3D" parent="."]
-transform = Transform3D(1.60632, 0, 0, 0, 1.61075, 0, 0, 0, 1.2, 0.0346355, -1.46269, -18.1262)
+transform = Transform3D(1.60632, 0, 0, 0, 1.61075, 0, 0, 0, 1.2, 0.0346355, -2.66295, -18.1262)
 render_priority = 1
 texture = ExtResource("3_su5er")
 
@@ -53,3 +64,10 @@ render_priority = 4
 texture = ExtResource("6_qbrv8")
 
 [node name="Curtain" parent="." instance=ExtResource("7_su5er")]
+
+[node name="CurtainClose" parent="." instance=ExtResource("8_t23st")]
+position = Vector2(3, -1)
+
+[node name="Pointer" parent="." instance=ExtResource("10_qv41w")]
+
+[node name="Pointer2" parent="." instance=ExtResource("14_bchlq")]

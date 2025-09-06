@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://321yy3q7ppvu"]
+
+[ext_resource type="Texture2D" uid="uid://dp2sb2rjo1usx" path="res://Assets/imgs/無題97_20250831194809.png" id="1_505ew"]
+[ext_resource type="Script" uid="uid://6ovtldumq5a1" path="res://Components/Character/rex.gd" id="2_unacl"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_unacl"]
+height = 0.1
+radius = 3.5
+
+[node name="Rex" type="Node3D"]
+script = ExtResource("2_unacl")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+render_priority = 2
+texture = ExtResource("1_505ew")
+
+[node name="Rex3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rex3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0475085, 0)
+shape = SubResource("CylinderShape3D_unacl")
+debug_color = Color(0, 0.564706, 0.862745, 1)

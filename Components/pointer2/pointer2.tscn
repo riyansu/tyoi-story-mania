@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlk2jhu7ts8a5"]
+
+[ext_resource type="Script" uid="uid://badeeb10jv5fc" path="res://Components/pointer2/pointer2.gd" id="1_taywl"]
+[ext_resource type="Texture2D" uid="uid://dchbeokig6dhl" path="res://Components/pointer2/assets/PointerBlue.png" id="2_taywl"]
+
+[node name="Pointer2" type="Node2D"]
+script = ExtResource("1_taywl")
+
+[node name="Cursor" type="Sprite2D" parent="."]
+position = Vector2(570, 383)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_taywl")

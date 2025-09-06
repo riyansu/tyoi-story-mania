@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://kb7x7tpav0bo"]
+
+[ext_resource type="Script" uid="uid://dr3kldytbscgd" path="res://Components/curtain/curtain.gd" id="1_bgai4"]
+[ext_resource type="Texture2D" uid="uid://cimne6ond5efh" path="res://Components/curtain/curtain.webp" id="1_wn7qq"]
+
+[node name="Curtain" type="Node2D"]
+script = ExtResource("1_bgai4")
+
+[node name="LeftCurtain" type="Sprite2D" parent="."]
+position = Vector2(290.5, 323.5)
+scale = Vector2(1.29955, 1.80168)
+texture = ExtResource("1_wn7qq")
+
+[node name="RightCurtain" type="Sprite2D" parent="."]
+position = Vector2(872, 323.5)
+scale = Vector2(1.29955, 1.80168)
+texture = ExtResource("1_wn7qq")
